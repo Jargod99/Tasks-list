@@ -15,5 +15,25 @@ html {
 }
 .section {
     background-color: white;
-    margin: 10px;
+    margin: 10px 0;
+ 
+    
+}
+
+.section__item {
+   padding: 20px;
+   
+
+}
+
+.section__header {
+    margin: 0px;
+    padding: 20px;
+    border:1px solid #ddd;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 20px;
 }
