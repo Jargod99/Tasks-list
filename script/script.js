@@ -1,12 +1,5 @@
 {
-    const tasks = [{
-        content: "test",
-        done: true,
-    },
-    {
-        content: "test2",
-        done: false,
-    }];
+    const tasks = [];
 
     const addNewTask = (newTask) => {
         tasks.push({
@@ -25,23 +18,7 @@
         render();
     };
 
-    const render = () => {
-        let addTextToHtml = "";
-        const tasksElement = document.querySelector(".js-tasks");
-        for (const task of tasks) {
-            addTextToHtml += `
-        <li>
-        <button class="js-toogleButton">
-       ${task.done ? "Y" : "N"}
-        </button>
-       <span class="${task.done ? "taskDone" : ""}">  
-       ${task.content}
-       </span>
-       <button class="js-removeButton">X</button>
-        </li>`
-        };
-        tasksElement.innerHTML = addTextToHtml;
-
+    const bindButtonTasks = () => {
         const toogleButton = document.querySelectorAll(".js-toogleButton");
         toogleButton.forEach((toogleButton, index) => {
             toogleButton.addEventListener("click", () => {
@@ -55,6 +32,28 @@
                 removeButtonTasks(index);
             });
         });
+    };
+
+    const render = () => {
+        let addTextToHtml = "";
+        const tasksElement = document.querySelector(".js-tasks");
+        for (const task of tasks) {
+            addTextToHtml += `
+        <li>
+            <button class="js-toogleButton">
+                ${task.done ? "Y" : "N"}
+            </button>
+            <span class="${task.done ? "taskDone" : ""}">  
+                ${task.content}
+            </span>
+            <button class="js-removeButton">
+                X
+            </button>
+        </li>`
+        };
+
+        tasksElement.innerHTML = addTextToHtml;
+        bindButtonTasks()
     };
 
     const onFormSubmit = (event) => {
@@ -73,5 +72,7 @@
         const form = document.querySelector(".js-form");
         form.addEventListener("submit", onFormSubmit);
     };
+
     init();
+
 }
