@@ -21,10 +21,23 @@
         for (const task of tasks) {
             addTextToHtml += `
         <li>
-        ${task.content}
+        <button class="js-toogleButton">
+       ${task.done ? "Y":"N"}
+        </button>
+       <span class="${task.done ? "taskDone":""}">  
+       ${task.content}
+       </span>
         </li>`
         };
         tasksElement.innerHTML = addTextToHtml;
+        
+        const toogleButton = document.querySelectorAll(".js-toogleButton");
+        toogleButton.forEach((toogleButton, index) => {
+            toogleButton.addEventListener("click", () => {
+                tasks[index].done = !tasks[index].done
+                render();
+            }); 
+        });
     };
 
     const init = () => {

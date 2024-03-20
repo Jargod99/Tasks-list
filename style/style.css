@@ -37,3 +37,7 @@ html {
     grid-template-columns: 1fr auto;
     grid-gap: 20px;
 }
+
+.taskDone {
+    text-decoration: line-through;
+}
