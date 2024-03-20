@@ -34,6 +34,7 @@
                 render();
                 newTaskElemnt.value = "";
             }
+            newTaskElemnt.focus();
         });
     };
     init();
