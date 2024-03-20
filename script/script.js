@@ -57,19 +57,21 @@
         });
     };
 
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+        const newTaskElemnt = document.querySelector(".js-newTask");
+        const newTask = newTaskElemnt.value.trim();
+        if (newTask !== "") {
+            addNewTask(newTask);
+            newTaskElemnt.value = "";
+        }
+        newTaskElemnt.focus();
+    };
+
     const init = () => {
         render();
         const form = document.querySelector(".js-form");
-        form.addEventListener("submit", (event) => {
-            event.preventDefault();
-            const newTaskElemnt = document.querySelector(".js-newTask");
-            const newTask = newTaskElemnt.value.trim();
-            if (newTask !== "") {
-                addNewTask(newTask);
-                newTaskElemnt.value = "";
-            }
-            newTaskElemnt.focus();
-        });
+        form.addEventListener("submit", onFormSubmit);
     };
     init();
 }
