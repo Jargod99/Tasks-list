@@ -15,10 +15,15 @@
         render();
     };
 
-const toogleButtonTasks = (index) => {
-    tasks[index].done = !tasks[index].done
-                render();
-};
+    const toogleButtonTasks = (index) => {
+        tasks[index].done = !tasks[index].done
+        render();
+    };
+
+    const removeButtonTasks = (index) => {
+        tasks.splice(index, 1);
+        render();
+    };
 
     const render = () => {
         let addTextToHtml = "";
@@ -27,30 +32,29 @@ const toogleButtonTasks = (index) => {
             addTextToHtml += `
         <li>
         <button class="js-toogleButton">
-       ${task.done ? "Y":"N"}
+       ${task.done ? "Y" : "N"}
         </button>
-       <span class="${task.done ? "taskDone":""}">  
+       <span class="${task.done ? "taskDone" : ""}">  
        ${task.content}
        </span>
        <button class="js-removeButton">X</button>
         </li>`
         };
         tasksElement.innerHTML = addTextToHtml;
-        
+
         const toogleButton = document.querySelectorAll(".js-toogleButton");
         toogleButton.forEach((toogleButton, index) => {
             toogleButton.addEventListener("click", () => {
                 toogleButtonTasks(index);
-            }); 
+            });
         });
 
         const removeButton = document.querySelectorAll(".js-removeButton");
         removeButton.forEach((removeButton, index) => {
             removeButton.addEventListener("click", () => {
-                tasks.splice(index, 1);
-                render();
-            })
-        })
+                removeButtonTasks(index);
+            });
+        });
     };
 
     const init = () => {
