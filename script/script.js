@@ -15,6 +15,11 @@
         render();
     };
 
+const toogleButtonTasks = (index) => {
+    tasks[index].done = !tasks[index].done
+                render();
+};
+
     const render = () => {
         let addTextToHtml = "";
         const tasksElement = document.querySelector(".js-tasks");
@@ -34,8 +39,7 @@
         const toogleButton = document.querySelectorAll(".js-toogleButton");
         toogleButton.forEach((toogleButton, index) => {
             toogleButton.addEventListener("click", () => {
-                tasks[index].done = !tasks[index].done
-                render();
+                toogleButtonTasks(index);
             }); 
         });
     };
