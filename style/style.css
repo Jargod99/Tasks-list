@@ -5,37 +5,54 @@ html {
 *, ::after ::before {
     box-sizing: inherit;
 }
+
 .body {
     background-color: #ddd;
 }
+
 .container {
-    max-width: 900px;
-    padding: 20px;
+    max-width: 600px;
+    padding: 10px;
     margin: auto;
 }
+
 .section {
     background-color: white;
     margin: 10px 0;
- 
-    
 }
 
-.section__item {
-   padding: 20px;
-   
-
+.section__body {
+    padding: 20px;
 }
 
 .section__header {
     margin: 0px;
     padding: 20px;
-    border:1px solid #ddd;
+    border: 1px solid #ddd;
 }
 
 .form {
     display: grid;
     grid-template-columns: 1fr auto;
     grid-gap: 20px;
+}
+
+.newTask {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+
+.tasksList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tasksList__item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 10px;
 }
 
 .taskDone {

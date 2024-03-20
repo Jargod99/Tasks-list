@@ -36,10 +36,10 @@
 
     const render = () => {
         let addTextToHtml = "";
-        const tasksElement = document.querySelector(".js-tasks");
+        const tasksElement = document.querySelector(".js-tasksList");
         for (const task of tasks) {
             addTextToHtml += `
-        <li>
+        <li class="tasksList__item">
             <button class="js-toogleButton">
                 ${task.done ? "Y" : "N"}
             </button>
