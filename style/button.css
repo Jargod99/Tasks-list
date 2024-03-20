@@ -1,0 +1,14 @@
+.tasksListButton {
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    color: white;
+}
+
+.tasksListButton--toogle {
+    background-color: teal;
+}
+
+.tasksListButton--reomve {
+    background-color: crimson;
+}
