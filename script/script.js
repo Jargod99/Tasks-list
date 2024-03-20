@@ -22,6 +22,19 @@
 
     const init = () => {
         render();
+        const form = document.querySelector(".js-form");
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const newTaskElemnt = document.querySelector(".js-newTask");
+            const newTask = newTaskElemnt.value.trim();
+            if(newTask !== "") {
+                tasks.push({
+                    content: newTask,
+                });
+                render();
+                newTaskElemnt.value = "";
+            }
+        });
     };
     init();
 }
