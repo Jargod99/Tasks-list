@@ -8,6 +8,13 @@
         done: false,
     }];
 
+    const addNewTask = (newTask) => {
+        tasks.push({
+            content: newTask,
+        });
+        render();
+    };
+
     const render = () => {
         let addTextToHtml = "";
         const tasksElement = document.querySelector(".js-tasks");
@@ -27,11 +34,8 @@
             event.preventDefault();
             const newTaskElemnt = document.querySelector(".js-newTask");
             const newTask = newTaskElemnt.value.trim();
-            if(newTask !== "") {
-                tasks.push({
-                    content: newTask,
-                });
-                render();
+            if (newTask !== "") {
+                addNewTask(newTask);
                 newTaskElemnt.value = "";
             }
             newTaskElemnt.focus();
