@@ -32,6 +32,7 @@ const toogleButtonTasks = (index) => {
        <span class="${task.done ? "taskDone":""}">  
        ${task.content}
        </span>
+       <button class="js-removeButton">X</button>
         </li>`
         };
         tasksElement.innerHTML = addTextToHtml;
@@ -42,6 +43,14 @@ const toogleButtonTasks = (index) => {
                 toogleButtonTasks(index);
             }); 
         });
+
+        const removeButton = document.querySelectorAll(".js-removeButton");
+        removeButton.forEach((removeButton, index) => {
+            removeButton.addEventListener("click", () => {
+                tasks.splice(index, 1);
+                render();
+            })
+        })
     };
 
     const init = () => {
