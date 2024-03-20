@@ -1,0 +1,19 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after ::before {
+    box-sizing: inherit;
+}
+.body {
+    background-color: #ddd;
+}
+.container {
+    max-width: 900px;
+    padding: 20px;
+    margin: auto;
+}
+.section {
+    background-color: white;
+    margin: 10px;
+}
