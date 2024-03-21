@@ -21,14 +21,14 @@ html {
     margin: 10px 0;
 }
 
-.section__body {
-    padding: 20px;
-}
-
 .section__header {
     margin: 0px;
     padding: 20px;
-    border: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.section__body {
+    padding: 20px;
 }
 
 .form {
@@ -53,6 +53,8 @@ html {
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-gap: 10px;
+    align-items: center;
+    padding: 5px;
 }
 
 .taskDone {
