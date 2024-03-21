@@ -1,5 +1,13 @@
 {
-    const tasks = [];
+    const tasks = [{
+        content: "Przykładowe zrobione zadanie",
+        done: true,
+    },
+    {
+        content: "Przykładowe nie zrobione zadanie",
+        done: false,
+    },
+    ];
 
     const addNewTask = (newTask) => {
         tasks.push({
@@ -39,22 +47,29 @@
         const tasksElement = document.querySelector(".js-tasksList");
         for (const task of tasks) {
             addTextToHtml += `
-        <li class="tasksList__item">
-            <button class="tasksListButton tasksListButton--toogle js-toogleButton">
-                ${task.done ? "✔" : ""}
-            </button>
-            <span class="${task.done ? "taskDone" : ""}">  
+                <li class="tasksList__item">
+                 <button class="tasksListButton tasksListButton--toogle js-toogleButton">
+                     ${task.done ? "✔" : ""}
+                 </button>
+                <span class="${task.done ? "taskDone" : ""}">  
                 ${task.content}
-            </span>
-            <button class="tasksListButton tasksListButton--reomve js-removeButton">
-            🗑
-            </button>
+                </span>
+                <button class="tasksListButton tasksListButton--reomve js-removeButton">
+                    🗑
+                 </button>
             
-        </li>
-        <hr>`
+                </li>
+                <hr>
+                `
         };
 
         tasksElement.innerHTML = addTextToHtml;
+
+        document.querySelector(".js-stats__item2").innerHTML = `
+        liczba wszystkich zadań: ${tasks.length}
+        `;
+        document.querySelector(".js-stats__item").innerHTML = `
+        liczba ukończonych zadań: ${tasks.filter(task => task.done).length}`;
         bindButtonTasks()
     };
 
