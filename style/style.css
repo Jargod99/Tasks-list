@@ -14,25 +14,6 @@ html {
 
 
 
-.newTask {
-    padding: 10px;
-    border: 1px solid #ddd;
-}
 
-.tasksList {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
 
-.tasksList__item {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-gap: 10px;
-    align-items: center;
-    padding: 5px;
-}
 
-.taskDone {
-    text-decoration: line-through;
-}
