@@ -11,6 +11,7 @@ Welcome to the simple to do list maker app!!!
 
 ## Demo
 
-![Task list](img/listTasks.PNG)
-[Demo link](https://jargod99.github.io/Tasks-list/)
+ ![Task list](img/listTasks.PNG)
+ 
+ [Demo link](https://jargod99.github.io/Tasks-list/)
 
