@@ -43,13 +43,13 @@
             addTextToHtml += `
         <li class="tasksList__item">
             <button class="tasksListButton tasksListButton--toogle js-toogleButton">
-                ${task.done ? "Y" : "N"}
+                ${task.done ? "✔" : ""}
             </button>
             <span class="${task.done ? "taskDone" : ""}">  
                 ${task.content}
             </span>
             <button class="tasksListButton tasksListButton--reomve js-removeButton">
-                X
+            🗑
             </button>
         </li>`
         };
