@@ -1,8 +1,17 @@
+.form__button {
+    background-color: teal;
+    color: white;
+    border: none;
+}
+
+
+
 .tasksListButton {
     width: 30px;
     height: 30px;
     padding: 0px;
     color: white;
+    border: none;
 }
 
 .tasksListButton--toogle {
