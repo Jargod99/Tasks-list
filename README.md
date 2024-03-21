@@ -3,6 +3,7 @@ Welcome to the simple to do list maker app!!!
 ## Table of contents
 - [Description](#description)
 - [Demo](#demo)
+- [Used technologies](#used-technologies)
 ## Description
 - Adding new tasks
 - crossing off completed tasks
@@ -14,4 +15,11 @@ Welcome to the simple to do list maker app!!!
  ![Task list](img/listTasks.PNG)
  
  [Demo link](https://jargod99.github.io/Tasks-list/)
+
+ ## Used technologies
+ - HTML
+ - CSS (media-queries, grid)
+ - JavaScript ES6
+ - BEM
+ - Normalize
 
