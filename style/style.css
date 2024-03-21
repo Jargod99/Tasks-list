@@ -10,12 +10,6 @@ html {
     background-color: #ddd;
 }
 
-.container {
-    max-width: 600px;
-    padding: 10px;
-    margin: auto;
-}
-
 .section {
     background-color: white;
     margin: 10px 0;
@@ -47,8 +41,6 @@ html {
     padding: 10px;
     border: 1px solid #ddd;
 }
-
-
 
 .tasksList {
     list-style-type: none;
