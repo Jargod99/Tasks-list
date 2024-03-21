@@ -7,7 +7,7 @@ Welcome to the simple to do list maker app!!!
 - [Description](#description)
 - [Demo](#demo)
 - [Used technologies](#used-technologies)
-- 
+
 ## Description
 - Adding new tasks
 - crossing off completed tasks
