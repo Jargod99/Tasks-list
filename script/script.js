@@ -49,7 +49,9 @@
             <button class="tasksListButton tasksListButton--reomve js-removeButton">
             🗑
             </button>
-        </li>`
+            
+        </li>
+        <hr>`
         };
 
         tasksElement.innerHTML = addTextToHtml;
